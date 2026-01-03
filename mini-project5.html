@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Auto Hide Banner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: #0d0d0d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 30px;
+        }
+
+        /* Glass Banner */
+        .banner {
+            height: 80%;
+            width: 60%;
+            padding: 14px 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+
+            color: #ffffff;
+
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        /* Optional hidden state (JS will toggle this) */
+        .banner.hide {
+            opacity: 0;
+            transform: translateY(-15px);
+            pointer-events: none;
+        }
+
+        .banner strong {
+            font-weight: 600;
+            color: #f0f0f0;
+        }
+
+        .banner span {
+            font-size: 14px;
+            color: #d0d0d0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Glass Banner -->
+    <div id="autoBanner" class="banner">
+        <strong>Notice</strong>
+        <span>This banner will disappear automatically.</span>
+    </div>
+    <script src="mini-project5.js"></script>
+</body>
+
+</html>
