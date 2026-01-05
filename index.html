@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Cards UI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #2f2f2f;
+        }
+
+        /* Search box */
+        .search-box {
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+        }
+
+        .search-box input {
+            width: 340px;
+            padding: 14px 18px;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+            background: #888;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-box input::placeholder {
+            color: #eaeaea;
+        }
+
+        /* Card layout */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+            padding: 80px 40px;
+            flex-wrap: wrap;
+        }
+
+        /* Card base */
+        .card {
+            width: 200px;
+            height: 260px;
+            border-radius: 16px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* Dark overlay inside card */
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        /* Card text */
+        .card-content {
+            position: absolute;
+            bottom: 0;
+            padding: 16px;
+            color: #fff;
+            z-index: 1;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+
+        .card p {
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        /* Background images per card */
+        .card1 {
+            background-image: url("https://images.unsplash.com/photo-1539571696357-5a69c17a67c6");
+        }
+
+        .card2 {
+            background-image: url("https://images.unsplash.com/photo-1544005313-94ddf0286df2");
+        }
+
+        .card3 {
+            background-image: url("https://images.unsplash.com/photo-1527980965255-d3b416303d12");
+        }
+
+        .card4 {
+            background-image: url("https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e");
+        }
+
+        .card5 {
+            background-image: url("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d");
+        }
+
+        .card6 {
+            background-image: url("https://images.unsplash.com/photo-1531123897727-8f129e1688ce");
+        }
+
+        .card7 {
+            background-image: url("https://images.unsplash.com/photo-1547425260-76bcadfb4f2c");
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search..." />
+    </div>
+
+    <div class="card-container">
+
+        <div class="card card1">
+            <div class="card-content">
+                <h3>Arjun Mehta</h3>
+                <p>Frontend developer focused on clean UI and modern web performance.</p>
+            </div>
+        </div>
+
+        <div class="card card2">
+            <div class="card-content">
+                <h3>Riya Patel</h3>
+                <p>UI/UX designer passionate about human-centered digital experiences.</p>
+            </div>
+        </div>
+
+        <div class="card card3">
+            <div class="card-content">
+                <h3>Aditya Verma</h3>
+                <p>JavaScript engineer building scalable and interactive applications.</p>
+            </div>
+        </div>
+
+        <div class="card card4">
+            <div class="card-content">
+                <h3>Neha Sharma</h3>
+                <p>Product designer with a strong sense of visual storytelling.</p>
+            </div>
+        </div>
+
+        <div class="card card5">
+            <div class="card-content">
+                <h3>Kunal Shah</h3>
+                <p>Full-stack developer focused on performance and security.</p>
+            </div>
+        </div>
+
+        <div class="card card6">
+            <div class="card-content">
+                <h3>Pooja Desai</h3>
+                <p>Design-oriented developer blending aesthetics with usability.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
